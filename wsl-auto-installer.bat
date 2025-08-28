@@ -50,7 +50,7 @@ REM Arrays start at 1, for this
 
 
 REM Array of all OS types this can deal with
-set "OS_TYPES[1]=Debian 12"
+set "OS_TYPES[1]=Debian"
 set "OS_TYPES[2]=Ubuntu 24.04"
 set "OS_TYPES[3]=Ubuntu 22.04"
 set "OS_TYPES[4]=Ubuntu 20.04"
@@ -1301,3 +1301,4 @@ IF "!folder!" EQU "" (
 
 endlocal & set "getfolder=%folder%"
 goto :eof
+

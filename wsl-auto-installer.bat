@@ -512,7 +512,7 @@ IF NOT [!PHP_VERSION!] EQU [] (
 				call :runonvm !FULL_VM_NAME! "echo '			# Forces a redirect to https' >> !config!"
 				call :runonvm !FULL_VM_NAME! "echo '			RewriteEngine on' >> !config!"
 				call :runonvm !FULL_VM_NAME! "echo $'			RewriteCond \x25{HTTPS} \x21=on' >> !config!"
-				call :runonvm !FULL_VM_NAME! "echo '			RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R=301,QSA,L]' >> !config!"
+				call :runonvm !FULL_VM_NAME! "echo $'			RewriteRule ^/?(.*) https://\x25{SERVER_NAME}/$1 [R=301,QSA,L]' >> !config!"
 				call :runonvm !FULL_VM_NAME! "echo '		</IfModule>' >> !config!"
 				call :runonvm !FULL_VM_NAME! "echo '	</Directory>' >> !config!"
 				call :runonvm !FULL_VM_NAME! "echo '</VirtualHost>' >> !config!"
